@@ -25,6 +25,7 @@ export default function Editor({ doc, session, isOwner, onTitleChange }) {
       BulletList, OrderedList, ListItem,
     ],
     content: doc.content || '',
+    autofocus: 'start',
     editable: isOwner,
     onUpdate: ({ editor }) => {
       if (!isOwner) return
